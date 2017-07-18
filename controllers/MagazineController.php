@@ -2,8 +2,11 @@
 
 namespace app\controllers;
 
+use app\models\AuthorForm;
 use app\models\MagazineForm;
 use app\models\Magazine;
+use app\models\Author;
+use app\models\AuthorMagazine;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -31,5 +34,9 @@ class MagazineController extends Controller
             return $this->refresh();
         }
         return $this->render('form', compact('form_journal'));
+    }
+    public function actionAuthor()
+    {
+        return $this->render('author');
     }
 }

@@ -20,8 +20,6 @@ use yii\helpers\Html;
 <?php endif;?>
 
 <?php $form = ActiveForm::begin(['options' => ['id'=>'journal_form']]) ?>
-<?=  $form->field($form_journal, 'first_name') ?>
-<?=  $form->field($form_journal, 'last_name') ?>
 <?=  $form->field($form_journal, 'title') ?>
 <?=  $form->field($form_journal, 'description')->textarea(['rows' => 5])?>
 
