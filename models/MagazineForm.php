@@ -2,19 +2,20 @@
 
 namespace app\models;
 
-use yii\base\Model;
+
+use yii\db\ActiveRecord;
 
 /**
  * Class MagazineForm
  * @package app\models
  */
-class MagazineForm extends Model
+class MagazineForm extends ActiveRecord
 {
-    public $first_name;
+    /*public $first_name;
     public $last_name;
     public $title;
     public $description;
-    public $publish_at;
+    public $publish_at;*/
 
     public function attributeLabels()
     {
