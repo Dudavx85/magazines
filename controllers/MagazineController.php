@@ -25,18 +25,27 @@ class MagazineController extends Controller
 
     public function actionCreate()
     {
-        $form_journal = new MagazineForm();
-        if ($form_journal->load(Yii::$app->request->post())) {
-            if (!$form_journal->validate()) {
+        $form_magazine = new MagazineForm();
+        if ($form_magazine->load(Yii::$app->request->post())) {
+            if (!$form_magazine->validate()) {
                 Yii::$app->session->setFlash('error', '{Validation error here}');
             }
             Yii::$app->session->setFlash('success', 'New magazine successfully created');
             return $this->refresh();
         }
-        return $this->render('form', compact('form_journal'));
+        return $this->render('form', compact('form_magazine'));
     }
     public function actionAuthor()
     {
-        return $this->render('author');
+        $form_author = new AuthorForm();
+        if ($form_author->load(Yii::$app->request->post())) {
+            if (!$form_author->validate()) {
+                Yii::$app->session->setFlash('error', '{Validation error here}');
+            }
+            Yii::$app->session->setFlash('success', 'New author successfully created');
+            return $this->refresh();
+        }
+        return $this->render('author', compact('form_author'));
+
     }
 }

@@ -20,8 +20,8 @@ use yii\helpers\Html;
 <?php endif;?>
 
 <?php $form = ActiveForm::begin(['options' => ['id'=>'journal_form']]) ?>
-<?=  $form->field($form_journal, 'title') ?>
-<?=  $form->field($form_journal, 'description')->textarea(['rows' => 5])?>
+<?=  $form->field($form_magazine, 'title') ?>
+<?=  $form->field($form_magazine, 'description')->textarea(['rows' => 5])?>
 
 <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 <?php ActiveForm::end() ?>

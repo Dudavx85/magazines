@@ -13,6 +13,9 @@ use yii\db\ActiveRecord;
 
 class AuthorForm extends ActiveRecord
 {
+    public $first_name;
+    public $last_name;
+
     public function attributeLabels()
     {
         return [
