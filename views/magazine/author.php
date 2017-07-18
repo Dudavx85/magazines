@@ -20,7 +20,8 @@ use yii\helpers\Html;
 
 <?php $form = ActiveForm::begin(['options' => ['id'=>'journal_form']]) ?>
 <?=  $form->field($form_author, 'first_name') ?>
-<?=  $form->field($form_author, 'last_name')->textarea(['rows' => 5])?>
+<?=  $form->field($form_author, 'last_name') ?>
 
 <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 <?php ActiveForm::end() ?>
+

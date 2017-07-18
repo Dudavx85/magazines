@@ -1,6 +1,7 @@
 <?php
 
 use yii\widgets\ActiveForm;
+use yii\widgets\ActiveField;
 use yii\helpers\Html;
 ?>
     <h1><?php echo $title ?: 'New Magazine' ?></h1>
@@ -25,3 +26,5 @@ use yii\helpers\Html;
 
 <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
 <?php ActiveForm::end() ?>
+
+<?php debug($authors); ?>
